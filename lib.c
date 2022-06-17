@@ -116,7 +116,7 @@ void	full_to_empty(t_task **L_full, t_task **L_empty)
 	t_task	*swet;
 
 	swet = *L_full;
-	if (!L_full || !L_empty)
+	if (!L_full || !L_empty || !swet->next)
 		return ;
 	full_change(*L_full, *L_empty);
 	*L_full = swet->next;
@@ -137,7 +137,7 @@ void	free_to_full(t_task **L_full, t_task **L_empty)
 	t_task	*swet;
 
 	swet = *L_empty;
-	if (!L_full || !L_empty)
+	if (!L_full || !L_empty || !swet->next)
 		return ;
 	empty_change(*L_full, *L_empty);
 	*L_empty = swet->next;

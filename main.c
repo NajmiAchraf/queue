@@ -95,6 +95,7 @@ int	main(void)
 
 	full_to_empty(&L_full, &L_empty);
 	full_to_empty(&L_full, &L_empty);
+	full_to_empty(&L_full, &L_empty);
 	
 	printf("\n**********FULL LIST\n");
 	printing(L_full);
